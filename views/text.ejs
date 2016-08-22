@@ -1,0 +1,69 @@
+<% include ../partials/header.ejs %>
+
+<div class="ui container">
+  <br>
+  <h1>Youtube to Text</h1>
+
+<!-- URL Search area.  -->
+  <form action="/moreVideos" method="get" class="ui form">
+    <input type="text" placeholder="enter any youtube url" name="youtube">
+  <br>
+  <button style="margin-left : 10px; margin-top : 15px" class="ui button blue">Search</button>
+  </form>
+
+  <br><br>
+
+
+  <div id="player"></div>
+<div style="margin-left : 200px">
+  <iframe id="player" type="text/html" width="600" height="340"
+    src="http://www.youtube.com/embed/<%= url %>?enablejsapi=1&origin=http://example.com"
+    frameborder="0"></iframe>
+    <br><br>
+<div style="margin-left : 198px">
+    <iframe style="width:200px;height:40px;border:0;overflow:hidden;" scrolling="no" src="//www.youtubeinmp3.com/widget/button/?video=https://www.youtube.com/watch?v=<%=url%>"&color=c91818></iframe>
+<br>
+
+</div>
+
+
+</div>
+<!-- Below me is the code to load the youtube API. -->
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    </script>
+<br><br>
+
+<style media="text/css">
+
+</style>
+
+
+</div>
+<br>
+
+<h4><%= file %></h4>
+<p id="myelement"></p>
+<br>  <br>
+
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+</script>
+
+
+
+
+
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,41 @@
+<% include ../partials/header.ejs %>
+
+<br>
+
+<div class="ui container">
+  <a href="/">Search Again</a>
+  <h3><%= nameOfFile %>---> Text Conversion</h3>
+
+  <p>Please wait, as it may take a while for the files to get processed by IBM's Watson.</p>
+
+    <h4 id="chat">
+
+    </h4>
+
+</div>
+
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="streamTest.js" type="text/javascript"></script>
+<script>
+
+   $(function(){
+     var socket = io.connect();
+    var $chat = $('#chat');
+    //This below me is how the data is going to flow out.
+    socket.on('tweets', function(data){
+         //$chat.append("<p>" + data.twit + "</p>");
+         $chat.append(data.twit);
+
+    });
+
+  });
+
+
+</script>
+
+
+
+
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,86 @@
+<% include ../partials/header.ejs %>
+
+<div class="ui container">
+  <br>
+  <h1>Youtube to Text</h1>
+
+<!-- URL Search area.  -->
+  <form action="/moreVideos" method="get" class="ui form">
+    <input type="text" placeholder="enter any youtube url" name="youtube">
+  <br>
+  <button style="margin-left : 10px; margin-top : 15px" class="ui button blue">Search</button>
+  </form>
+
+  <br><br>
+
+
+  <div id="player"></div>
+<div style="margin-left : 200px">
+  <iframe id="player" type="text/html" width="600" height="340"
+    src="http://www.youtube.com/embed/<%= url %>?enablejsapi=1&origin=http://example.com"
+    frameborder="0"></iframe>
+    <br><br>
+<div style="margin-left : 198px">
+    <iframe style="width:200px;height:40px;border:0;overflow:hidden;" scrolling="no" src="//www.youtubeinmp3.com/widget/button/?video=https://www.youtube.com/watch?v=<%=url%>"&color=c91818></iframe>
+<br>
+
+</div>
+
+
+</div>
+<!-- Below me is the code to load the youtube API. -->
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      // var tag = document.createElement('script');
+      //
+      // tag.src = "https://www.youtube.com/iframe_api";
+      // var firstScriptTag = document.getElementsByTagName('script')[0];
+      // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    </script>
+<br><br>
+
+<style media="text/css">
+
+</style>
+
+<form action="/upload" enctype="multipart/form-data" method="POST">
+<div style="margin-left : 200px">
+  <h4>Drag MP3 file in green box, to convert to text.</h4>
+  <h1 style="width : 20px">
+  <input type="file" name='myImage' value="Drag MP3 Here" style="padding : 50px; background-color : green; padding-right : 15px; margin-right : 33px;">
+</h1>
+</div>
+  <br> <br>
+  <div style="margin-left : 455px">
+  <input type="submit" name="submit" value="Turn To Text" class="ui button red mini">
+  </div>
+</form>
+</div>
+<br>
+<!-- Drag and drop functionality. -->
+<!-- <div id="uploads"></div>
+<div id="dropzone" class="dropzone">Drag Youtube MP3 Here</div>
+<button style="margin-left : 455px; margin-top : 15px" class="ui button red">Turn To Text</button> -->
+
+
+<p id="myelement"></p>
+
+
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+  // jQuery.get("text.txt", function(data){
+  //   $('#myelement').load(data);
+  // });
+
+
+</script>
+
+
+
+
+
+<% include ../partials/footer.ejs %>

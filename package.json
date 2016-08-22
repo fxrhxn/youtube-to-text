@@ -1,0 +1,33 @@
+{
+  "name": "youtube_text_converter",
+  "version": "1.0.0",
+  "description": "An application that converts Youtube videos into text. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Farhan Rahman",
+  "license": "ISC",
+  "dependencies": {
+    "audio-context": "^0.1.0",
+    "audiobuffer-to-wav": "^1.0.0",
+    "body-parser": "^1.15.2",
+    "browserify": "^13.1.0",
+    "cloudconvert": "^1.1.1",
+    "colors": "^1.1.2",
+    "connect-busboy": "0.0.2",
+    "drag-drop": "^2.12.1",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "fs": "0.0.2",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.5.9",
+    "multer": "^1.2.0",
+    "node-wav": "0.0.1",
+    "socket.io": "^1.4.8",
+    "socket.io-stream": "^0.9.0",
+    "watson-developer-cloud": "^2.1.2",
+    "xhr": "^2.2.2",
+    "youtube-mp3": "^0.1.2"
+  }
+}
